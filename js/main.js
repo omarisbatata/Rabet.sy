@@ -135,7 +135,7 @@
 
   /* ---------------- hero logo parallax ---------------- */
   if (!isTouch && !reduce) {
-    var logo = document.getElementById("heroLogo");
+    var logo = document.getElementById("heroMark");
     var hero = document.querySelector(".hero");
     hero.addEventListener("mousemove", function (e) {
       var r = hero.getBoundingClientRect();
@@ -199,7 +199,7 @@
           var prox = 1 - d / LINK;
           var alpha = prox * 0.045 + rev * prox * 0.95;
           if (alpha > 0.012) {
-            cx.strokeStyle = "rgba(201,162,39," + alpha.toFixed(3) + ")";
+            cx.strokeStyle = "rgba(15,181,161," + alpha.toFixed(3) + ")";
             cx.lineWidth = rev > 0.25 ? 1.1 : 0.55;
             cx.beginPath(); cx.moveTo(a.x, a.y); cx.lineTo(b.x, b.y); cx.stroke();
           }
@@ -211,10 +211,10 @@
       var pd = Math.sqrt((p.x - pointer.x) * (p.x - pointer.x) + (p.y - pointer.y) * (p.y - pointer.y));
       var near = power > 0 ? Math.max(0, 1 - pd / REVEAL) * power : 0;
       var al = 0.16 + near * 0.8 + (p.anchor ? 0.16 : 0);
-      cx.fillStyle = "rgba(236,210,141," + Math.min(al, 1).toFixed(3) + ")";
+      cx.fillStyle = "rgba(191,237,229," + Math.min(al, 1).toFixed(3) + ")";
       cx.beginPath(); cx.arc(p.x, p.y, p.r + near * 1.5, 0, 6.2832); cx.fill();
       if (near > 0.3) {
-        cx.fillStyle = "rgba(201,162,39," + (near * 0.1).toFixed(3) + ")";
+        cx.fillStyle = "rgba(15,181,161," + (near * 0.1).toFixed(3) + ")";
         cx.beginPath(); cx.arc(p.x, p.y, (p.r + near * 1.5) * 4.2, 0, 6.2832); cx.fill();
       }
     }
@@ -228,7 +228,7 @@
 
   if (reduce) {
     build(); cx.clearRect(0, 0, W, H);
-    nodes.forEach(function (p) { cx.fillStyle = "rgba(236,210,141,0.22)"; cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 6.28); cx.fill(); });
+    nodes.forEach(function (p) { cx.fillStyle = "rgba(191,237,229,0.22)"; cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 6.28); cx.fill(); });
   } else { build(); requestAnimationFrame(step); }
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(build, 200); });
 

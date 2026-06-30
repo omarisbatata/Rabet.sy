@@ -11,31 +11,26 @@
 <link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Outfit:wght@300;400;500;600&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<div class="grain"></div>
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
 <!-- preloader -->
 <div id="loader">
   <div class="loader-mark">
-    <svg viewBox="0 0 130 130">
-      <circle class="loader-ring" cx="65" cy="65" r="61"/>
-      <path class="loader-tick" d="M65 4 v8 M65 118 v8 M4 65 h8 M118 65 h8"/>
-      <path class="loader-tick" d="M65 2 l6 6 l-6 6 l-6 -6 z" transform="translate(0,2)"/>
-    </svg>
-    <div class="loader-word">رابط</div>
+    <span class="loader-symbol">ر</span>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
   </div>
 </div>
 
 <!-- nav -->
 <header id="head">
   <a href="#top" class="brand" aria-label="Rabet home">
-    <img src="assets/rabet_mark.png" alt="Rabet emblem" />
+    <span class="brand-symbol">ر</span>
     <span class="name"><span class="ar">رابط</span><span class="lat">Rabet</span></span>
   </a>
   <nav id="nav">
@@ -71,13 +66,19 @@
   <canvas id="weave"></canvas>
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <div class="hero-logo-wrap">
-      <img class="hero-logo" id="heroLogo" src="assets/rabet_hero.jpg" alt="Rabet — رابط logo" />
-    </div>
     <div class="eyebrow">
       <span class="motif"><span class="bar"></span><span class="dia"></span></span>
       <span data-i18n="hero.eyebrow">Syrian digital agency</span>
       <span class="motif r"><span class="dia"></span><span class="bar"></span></span>
+    </div>
+    <div class="hero-mark-wrap">
+      <span class="hero-pulse r1"></span>
+      <span class="hero-pulse r2"></span>
+      <div class="hero-mark" id="heroMark">ر</div>
+    </div>
+    <div class="hero-connector">
+      <div class="hc-bar"></div>
+      <div class="hc-node"></div>
     </div>
     <h1 data-i18n="hero.h1">The bridge between your business and the people <em>looking for it.</em></h1>
     <p class="lede" data-i18n="hero.lede">Rabet builds, manages, and grows your online presence — directly. No middlemen. No noise. Just us, doing the work.</p>
@@ -168,9 +169,9 @@
       </div>
       <svg id="flowSvg" viewBox="0 0 520 240" aria-hidden="true">
         <g id="endpoints">
-          <circle cx="46" cy="120" r="6" fill="#ecd28d"/>
+          <circle cx="46" cy="120" r="6" fill="#0FB5A1"/>
           <text class="node-label" x="46" y="148" text-anchor="middle" data-i18n="work.you">You</text>
-          <circle cx="474" cy="120" r="6" fill="#ecd28d"/>
+          <circle cx="474" cy="120" r="6" fill="#0FB5A1"/>
           <text class="node-label" x="474" y="148" text-anchor="middle" data-i18n="work.live">Live</text>
         </g>
         <g id="g-others" opacity="0">
@@ -188,12 +189,12 @@
         <g id="g-rabet">
           <path id="directLine" d="M52 120 H230 M290 120 H468" fill="none" stroke="url(#gg)" stroke-width="2" stroke-linecap="round"/>
           <circle id="pulse" r="4" fill="#fff"/>
-          <circle cx="260" cy="120" r="26" fill="#16130f" stroke="#c9a227" stroke-width="1.4"/>
-          <text x="260" y="127" text-anchor="middle" font-family="'Aref Ruqaa',serif" font-size="20" fill="#ecd28d">رابط</text>
+          <circle cx="260" cy="120" r="26" fill="#141312" stroke="#FF4D2E" stroke-width="1.4"/>
+          <text x="260" y="127" text-anchor="middle" font-family="'IBM Plex Sans Arabic',sans-serif" font-weight="700" font-size="17" fill="#F4F1EA">رابط</text>
         </g>
         <defs>
           <linearGradient id="gg" x1="0" x2="1">
-            <stop offset="0" stop-color="#9c7b2e"/><stop offset=".5" stop-color="#ecd28d"/><stop offset="1" stop-color="#9c7b2e"/>
+            <stop offset="0" stop-color="#07312B"/><stop offset=".5" stop-color="#0FB5A1"/><stop offset="1" stop-color="#07312B"/>
           </linearGradient>
         </defs>
       </svg>
@@ -240,7 +241,7 @@
 <!-- footer -->
 <footer>
   <div class="foot-brand">
-    <img src="assets/rabet_mark.png" alt="Rabet emblem"/>
+    <span class="brand-symbol">ر</span>
     <div><div class="ar">رابط</div><div class="lat">Rabet · Syria</div></div>
   </div>
   <div class="foot-mid">أقوى الجسور ما بينشاف.</div>
